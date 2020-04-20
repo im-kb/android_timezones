@@ -6,81 +6,35 @@
     android:layout_height="match_parent"
     android:background="@android:color/white">
 
-    <EditText
-        android:id="@+id/tokyoValue"
-        android:layout_width="110dp"
-        android:layout_height="33dp"
-        android:layout_marginEnd="40dp"
-        android:background="@android:color/white"
-        android:editable="false"
-        android:ems="10"
-        android:gravity="center"
-        android:textColor="@android:color/black"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@+id/tokyoLabel"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/tokyoLabel" />
-
-    <EditText
-        android:id="@+id/londonValue"
-        android:layout_width="110dp"
-        android:layout_height="33dp"
-        android:layout_marginEnd="40dp"
-        android:background="@android:color/white"
-        android:editable="false"
-        android:ems="10"
-        android:gravity="center"
-        android:textColor="@android:color/black"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@+id/londonLabel"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/londonLabel" />
-
-    <EditText
-        android:id="@+id/newYorkValue"
-        android:layout_width="110dp"
-        android:layout_height="33dp"
-        android:layout_marginEnd="40dp"
-        android:background="@android:color/white"
-        android:editable="false"
-        android:ems="10"
-        android:gravity="center"
-        android:textColor="@android:color/black"
-        android:textSize="24sp"
+    <TextView
+        android:id="@+id/nyBackground"
+        android:layout_width="450dp"
+        android:layout_height="70dp"
+        android:background="#D3D3D3"
         app:layout_constraintBottom_toBottomOf="@+id/newYorkLabel"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/newYorkLabel"
         app:layout_constraintTop_toTopOf="@+id/newYorkLabel" />
 
-    <EditText
-        android:id="@+id/mobileTimeValue"
-        android:layout_width="239dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="120dp"
-        android:layout_marginEnd="120dp"
-        android:background="@android:color/white"
-        android:editable="false"
-        android:ems="10"
-        android:gravity="center"
-        android:textColor="@android:color/black"
-        android:textSize="36dp"
+    <TextView
+        android:id="@+id/londonBackground"
+        android:layout_width="450dp"
+        android:layout_height="70dp"
+        android:background="#D3D3D3"
+        app:layout_constraintBottom_toBottomOf="@+id/londonLabel"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mobileTimeLabel" />
+        app:layout_constraintStart_toStartOf="@+id/londonLabel"
+        app:layout_constraintTop_toTopOf="@+id/londonLabel" />
 
     <TextView
-        android:id="@+id/mobileTimeLabel"
-        android:layout_width="251dp"
-        android:layout_height="63dp"
-        android:layout_marginStart="128dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="128dp"
-        android:gravity="center"
-        android:text="Mobile time"
-        android:textColor="@android:color/black"
-        android:textSize="36sp"
+        android:id="@+id/tokyoBackground"
+        android:layout_width="450dp"
+        android:layout_height="73dp"
+        android:background="#D3D3D3"
+        app:layout_constraintBottom_toBottomOf="@+id/tokyoLabel"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="@+id/tokyoLabel"
+        app:layout_constraintTop_toTopOf="@+id/tokyoLabel" />
 
     <TextView
         android:id="@+id/newYorkLabel"
@@ -91,6 +45,7 @@
         android:text="New York"
         android:textColor="@android:color/black"
         android:textSize="24sp"
+        style="@style/otherTimeFont"
         app:layout_constraintStart_toEndOf="@+id/newYorkImageView"
         app:layout_constraintTop_toBottomOf="@+id/mobileTimeLabel" />
 
@@ -101,22 +56,69 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="112dp"
         android:text="London"
-        android:textColor="@android:color/black"
-        android:textSize="24sp"
+        style="@style/otherTimeFont"
         app:layout_constraintStart_toEndOf="@+id/londonImageView"
         app:layout_constraintTop_toBottomOf="@+id/newYorkLabel" />
 
     <TextView
         android:id="@+id/tokyoLabel"
+        style="@style/otherTimeFont"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="112dp"
         android:text="Tokyo"
-        android:textColor="@android:color/black"
-        android:textSize="24sp"
         app:layout_constraintStart_toEndOf="@+id/tokyoImageVIew"
         app:layout_constraintTop_toBottomOf="@+id/londonLabel" />
+
+    <TextView
+        android:id="@+id/tokyoValue"
+        style="@style/otherTimeFont"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tokyoLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tokyoLabel" />
+
+    <TextView
+        android:id="@+id/londonValue"
+        style="@style/otherTimeFont"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        app:layout_constraintBottom_toBottomOf="@+id/londonLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/londonLabel" />
+
+    <TextView
+        android:id="@+id/newYorkValue"
+        style="@style/otherTimeFont"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        app:layout_constraintBottom_toBottomOf="@+id/newYorkLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/newYorkLabel" />
+
+    <TextView
+        android:id="@+id/mobileTimeValue"
+        style="@style/mobileTimeFont"
+        android:layout_width="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mobileTimeLabel" />
+
+    <TextView
+        android:id="@+id/mobileTimeLabel"
+        style="@style/mobileTimeFont"
+        android:layout_width="match_parent"
+        android:layout_marginTop="32dp"
+        android:text="Mobile time"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
     <ImageView
         android:id="@+id/newYorkImageView"

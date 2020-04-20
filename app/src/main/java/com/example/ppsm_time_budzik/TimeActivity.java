@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import java.time.LocalTime;
 import java.time.ZoneId;
@@ -14,7 +15,7 @@ import java.util.concurrent.TimeUnit;
 
 public class TimeActivity extends AppCompatActivity {
 
-    private EditText newYorkTime, londonTime, tokyoTime, mobileTime;
+    private TextView newYorkTime, londonTime, tokyoTime, mobileTime;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
